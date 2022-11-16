@@ -1,0 +1,567 @@
+@charset "UTF-8";
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+/*@font-face {
+    font-family: "";    Añadir una tipografia descargada
+    src: url("../assets/backgrounds/#");
+}*/
+/*selector univerrsal*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body01 {
+  background-color: rgb(19, 19, 19);
+}
+
+/*Medidas*/
+html {
+  font-size: 20px;
+}
+
+main {
+  padding-top: 100px;
+}
+
+/*Barra de navegacion*/
+.navegacion {
+  width: 100%;
+  background: #000;
+  background-size: cover;
+}
+
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-collapse {
+  flex-grow: inherit;
+  margin-right: 11%;
+}
+
+.container-fluid {
+  margin-left: 11%;
+}
+
+.logo {
+  width: 100%;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #f29718;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+  width: 100%;
+}
+
+nav ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*Home*/
+.conntendor__home {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+}
+
+.d-block {
+  height: 700px;
+}
+
+.contenedor__Titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 35px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: rgb(255, 187, 0);
+}
+
+.texto {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title-noticias {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Albert Sans", sans-serif;
+  font-style: oblique;
+  color: #f29718;
+}
+
+.contenedoNoti {
+  margin-top: 50px;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 45px;
+  border-top: 6px solid #f29718;
+  margin: 20px auto;
+  margin-bottom: 20px;
+}
+
+.contenedorNoti__titulo {
+  font-family: "Albert Sans", sans-serif;
+  font-style: italic;
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedorNoti__titulo1 {
+  font-family: "Albert Sans", sans-serif;
+  font-style: italic;
+  color: #f29718;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contenedorNoti__img {
+  margin-top: 20px;
+  width: 650px;
+  height: 400px;
+  transition: transform 0.5s;
+}
+
+.contenedorNoti__img:hover {
+  transform: scale(1.1);
+}
+
+.contenedorNoti__texto {
+  font-family: "Albert Sans", sans-serif;
+  color: #fff;
+  text-align: justify;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.video1 {
+  margin-top: 40px;
+}
+
+/*Zoom Imagenes*/
+.zoom {
+  padding-bottom: 30px;
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.resdessociales {
+  position: relative;
+  text-align: right;
+  border-radius: 10px;
+}
+
+/*Contacto*/
+.body-contacto {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+}
+
+.body-contacto {
+  background-image: url(../assets/icons/cajeros.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding-bottom: 350px;
+  padding-top: 90px;
+}
+
+.contenedor .form .form-header .form-title {
+  font-weight: normal;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: #ff851b;
+  padding: 14px 0;
+}
+
+.contenedor .form .form-header .form-title span {
+  color: #fff;
+}
+
+.contenedor .form {
+  background: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 5px 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.contenedor .form .form-label {
+  display: block;
+  color: #ff851b;
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+}
+
+.contenedor .form .form-input, .form-text {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ff851b;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contenedor .form .form-text {
+  resize: vertical;
+  max-height: 150px;
+  min-height: 50px;
+}
+
+.contenedor .form .boton-submit {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+  background: #ff851b;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.contenedor .form .boton-submit:hover {
+  background: #f29718;
+}
+
+/*Footer*/
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+}
+.footer .grupo-1 {
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.footer .grupo-1 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .grupo-1 .box h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.footer .grupo-2 {
+  padding: 15px 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+
+.footer1 {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  background-position: center;
+  margin-top: auto;
+  bottom: 0;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer1 .grupo-1 {
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.footer1 .grupo-1 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer1 .grupo-1 .box h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.footer1 .grupo-2 {
+  padding: 15px 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+#footer-contacto {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+  color: #f29718;
+  padding: 20px 20px;
+  background-size: cover;
+  display: flex;
+  background-position: center;
+  margin-top: auto;
+  bottom: 0;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer {
+  width: 100%;
+  background-color: black;
+  color: #f29718;
+  padding: 15px 15px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.redes {
+  border-radius: 9px;
+  margin-right: 25px;
+  text-align: center;
+}
+
+.footer-text1 {
+  text-align: left;
+  padding: 0;
+}
+
+.footer-text2 {
+  text-align: left;
+}
+
+/*Explorar*/
+.explorar__titulo {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.explorar__imgs {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  width: 65%;
+  margin: 10px auto;
+  padding: 10px 0;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  background-color: rgb(19, 19, 19);
+  transition: transform 0.5s;
+  padding-bottom: 5px;
+}
+
+.card-text {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+}
+
+.card-body {
+  width: 150px;
+  height: 90px;
+}
+
+.card-img-top {
+  height: 230px;
+  width: 150px;
+}
+
+.explorar__divisor {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 20px;
+}
+
+/*Info*/
+.title-info {
+  text-align: center;
+  font-family: "Albert Sans", sans-serif;
+  font-style: oblique;
+  color: #f29718;
+  margin: 20px auto;
+}
+
+.contenedor1 {
+  margin-top: 60px;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 45px;
+  border-top: 6px solid #f29718;
+  margin: 20px auto;
+  margin-bottom: 20px;
+}
+
+.contenedor1__info {
+  padding-top: 70px;
+  font-family: "Albert Sans", sans-serif;
+  font-style: italic;
+  color: #fff;
+  font-size: 35px;
+}
+
+.contenedor1__img {
+  height: 400px;
+  width: 650px;
+  margin-top: 30px;
+  transition: transform 0.5s;
+}
+
+.contenedor1__img:hover {
+  transform: scale(1.1);
+}
+
+.contenedor1__texto {
+  font-family: "Albert Sans", sans-serif;
+  color: #fff;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 300px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.video1 {
+  margin-top: 40px;
+}
+
+/*Media queries*/
+/*Tablet*/
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  /*Index*/
+  .d-block {
+    height: 300px;
+  }
+  /*Explorar*/
+  .explorar__imgs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .explorar__img {
+    margin-top: 10px;
+  }
+  /*Noticias*/
+  .contenedoNoti {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .contenedorNoti__titulo1 {
+    text-align: center;
+  }
+  .contenedorNoti__img {
+    width: 100%;
+    height: 200px;
+  }
+  /*Info*/
+  .contenedor1__img {
+    width: 100%;
+    height: 200px;
+  }
+  .video1 {
+    width: 100%;
+    height: 190px;
+  }
+  /*Recomendaciones*/
+  .explorar__titulo {
+    text-align: center;
+  }
+  /*Contacto*/
+  .contenedor {
+    flex-direction: column;
+  }
+  /*Footer*/
+  .footer .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+  .footer1 .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+  .footer .grupo-2 {
+    text-align: center;
+    color: #fff;
+  }
+}
